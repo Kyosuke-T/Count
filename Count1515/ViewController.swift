@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var label: UILabel!
+    
+    var number : Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func Plus(){
+    number += 1
+    label.text = String(number)
+    
+    }
 
+    @IBAction  func Minus(){
+    number -= 1
+        label.text = String(number)
+    }
 }
 
